@@ -27,7 +27,14 @@ Notes:
 
 Please, download the full cc-webgraph JAR (including all dependent libraries) from [here](https://github.com/commoncrawl/wac2025-webgraph-workshop/raw/refs/heads/main/data/large-files/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar).
 
-In the following, we refer to this JAR file using the variable `$CC_WEBGRAPH_JAR`. If you know about environment variables, you should define `CC_WEBGRAPH_JAR` and point it to the absolute path of the downloaded JAR file.
+In the following, we refer to this JAR file using the variable `$CC_WEBGRAPH_JAR`. If you know about environment variables, you should define `CC_WEBGRAPH_JAR` and point it to the absolute path of the downloaded JAR file. If you use a Shell you can define the variable as
+
+    CC_WEBGRAPH_JAR="$PWD"/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar
+
+Optionally you might want to set the environment variable `CLASSPATH`, used by Java and the JShell, and point it to jar file. On Unix systems this is done by:
+
+    CLASSPATH="$CC_WEBGRAPH_JAR"
+    export CLASSPATH
 
 
 ### Clone or Download the cc-webgraph Project Repository
@@ -45,7 +52,13 @@ or download it as zip file:
     wget --timestamping https://github.com/commoncrawl/cc-webgraph/archive/refs/heads/main.zip
     unzip main.zip
 
-In the following, we refer to the project directory (`cc-webgraph` or `cc-webgraph-main`) using the variable `$CC_WEBGRAPH`.
+In the following, we refer to the project directory (`cc-webgraph` or `cc-webgraph-main`) using the variable `$CC_WEBGRAPH`. If you use a Shell you can define the variable as
+
+    CC_WEBGRAPH="$PWD"/cc-webgraph        # cloned repository
+
+or
+
+    CC_WEBGRAPH="$PWD"/cc-webgraph-main   # zipped repository package
 
 We will use scripts from it in the workshop, but you can also visit and download the scripts individually from Github.
 
@@ -94,9 +107,14 @@ It is assumed that Java JDK (Java 11 or upwards), Maven and Git are installed.
 4. Define two environment variables, pointing to the project directory and the JAR file:
 
         CC_WEBGRAPH="$PWD"
-        CC_WEBGRAPH_JAR="$PWD"/target/cc-webgraph-*-jar-with-dependencies.jar
+        CC_WEBGRAPH_JAR=$(ls "$PWD"/target/cc-webgraph-*-jar-with-dependencies.jar)
 
-The project itself provides few Java classes and scripts to construct and process web graphs from Common Crawl data.
+   Optionally you might want to set the environment variable `CLASSPATH` which is used by Java and the JShell:
+
+        CLASSPATH="$CC_WEBGRAPH_JAR"
+        export CLASSPATH
+
+The project `cc-webgraph` provides few Java classes and scripts to construct and process web graphs from Common Crawl data.
 
 The assembly jar file includes also the [WebGraph](https://webgraph.di.unimi.it/) and [LAW](https://law.di.unimi.it/software.php) packages required to compute [PageRank](https://en.wikipedia.org/wiki/PageRank) and [Harmonic Centrality](https://en.wikipedia.org/wiki/Centrality#Harmonic_centrality).
 
