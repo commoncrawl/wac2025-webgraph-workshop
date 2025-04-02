@@ -1,0 +1,6 @@
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024.graph
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024.properties
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024-t.graph
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024-t.properties
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024.stats
+http://data.law.di.unimi.it/webdata/enwiki-2024/enwiki-2024.lmap
