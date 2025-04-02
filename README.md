@@ -23,11 +23,11 @@ Notes:
 
 
 
-### Download the Webgraph JAR
+### Download the CC-Webgraph JAR
 
-tbd. add the jar-with-dependencies to this repository as git large file
+Please, download the full cc-webgraph JAR (including all dependent libraries) from [here](https://github.com/commoncrawl/wac2025-webgraph-workshop/raw/refs/heads/main/data/large-files/cc-webgraph-0.1-SNAPSHOT-jar-with-dependencies.jar).
 
-In the following, we refer to this JAR file using the variable `$CC_WEBGRAPH_JAR`.
+In the following, we refer to this JAR file using the variable `$CC_WEBGRAPH_JAR`. If you know about environment variables, you should define `CC_WEBGRAPH_JAR` and point it to the absolute path of the downloaded JAR file.
 
 
 ### Clone or Download the cc-webgraph Project Repository
@@ -187,7 +187,7 @@ Or, in case you cannot run the script, by building the offset lists with the com
     java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024
     java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024-t
 
-And downloading at the vertex map from [here](tbd.).
+And downloading at the vertex map from [here](https://github.com/commoncrawl/wac2025-webgraph-workshop/raw/refs/heads/main/data/large-files/cc-main-2025-jan-feb-mar-domain.iepm).
 
 When everything is done, you should see the following files in your directory:
 ```
