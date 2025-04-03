@@ -93,8 +93,8 @@ It is assumed that Java JDK (Java 11 or upwards), Maven and Git are installed.
 
 4. Define two environment variables, pointing to the project directory and the JAR file:
 
-        CC_WEBGRAPH=$PWD
-        CC_WEBGRAPH_JAR=$PWD/target/cc-webgraph-*-jar-with-dependencies.jar
+        CC_WEBGRAPH="$PWD"
+        CC_WEBGRAPH_JAR="$PWD"/target/cc-webgraph-*-jar-with-dependencies.jar
 
 The project itself provides few Java classes and scripts to construct and process web graphs from Common Crawl data.
 
@@ -135,8 +135,8 @@ In order to explore the graph yourself using the WebGraph framework, please down
 
 After the files are downloaded, the following two commands are required to build the offset lists for both the graph and its transpose:
 
-    java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024
-    java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024-t
+    java -cp "$CC_WEBGRAPH_JAR" it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024
+    java -cp "$CC_WEBGRAPH_JAR" it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024-t
 
 
 
@@ -155,7 +155,7 @@ Please, download six of the domain-level files in a separate folder:
 
   Or if you have a local copy of the cc-webgraph project:
 
-        bash $CC_WEBGRAPH/src/script/webgraph_ranking/graph_explore_download_webgraph.sh cc-main-2025-jan-feb-mar-domain
+        bash "$CC_WEBGRAPH"/src/script/webgraph_ranking/graph_explore_download_webgraph.sh cc-main-2025-jan-feb-mar-domain
 
 - Alternatively, using the [download list](./data/cc-main-2025-jan-feb-mar-domain/cc-main-2025-jan-feb-mar-domain-download-list.txt):
 
@@ -180,12 +180,12 @@ After the files are downloaded, we need to build
 
 This can be done by running the script [graph_explore_build_vertex_map.sh](https://raw.githubusercontent.com/commoncrawl/cc-webgraph/refs/heads/main/src/script/webgraph_ranking/graph_explore_build_vertex_map.sh):
 
-    bash $CC_WEBGRAPH/src/script/webgraph_ranking/graph_explore_build_vertex_map.sh cc-main-2025-jan-feb-mar-domain cc-main-2025-jan-feb-mar-domain-vertices.txt.gz
+    bash "$CC_WEBGRAPH"/src/script/webgraph_ranking/graph_explore_build_vertex_map.sh cc-main-2025-jan-feb-mar-domain cc-main-2025-jan-feb-mar-domain-vertices.txt.gz
 
 Or, in case you cannot run the script, by building the offset lists with the commands:
 
-    java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024
-    java -cp $CC_WEBGRAPH_JAR it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024-t
+    java -cp "$CC_WEBGRAPH_JAR" it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024
+    java -cp "$CC_WEBGRAPH_JAR" it.unimi.dsi.webgraph.BVGraph --offsets --list enwiki-2024-t
 
 And downloading at the vertex map from [here](https://github.com/commoncrawl/wac2025-webgraph-workshop/raw/refs/heads/main/data/large-files/cc-main-2025-jan-feb-mar-domain.iepm).
 
