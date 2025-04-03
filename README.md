@@ -65,7 +65,7 @@ Ideally, you launch it in a terminal by typing `jshell'. You should get the prom
 
 This requirement is optional.
 
-We provide scripts to download CCF's webgraphs and to build the required offset and vertex maps. If you want to run the scripts a Bash shell is required. In addition, the download script relies on cURL or Wget as download tool.
+We provide scripts to download CCF's webgraphs and to build the required offset and vertex maps. If you want to run the scripts a Bash shell (version 4 or higher) is required. In addition, the download script relies on cURL or Wget as download tool.
 
 However, in case you have no Bash, or none of cURL or Wget installed, it's no issue. You only need to copy-paste a few commands into your terminal.
 
