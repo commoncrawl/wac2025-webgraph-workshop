@@ -1,0 +1,5 @@
+0	https://en.wikipedia.org/wiki/Webgraph
+1	https://en.wikipedia.org/wiki/PageRank
+2	https://en.wikipedia.org/wiki/Popularity
+3	https://en.wikipedia.org/wiki/World_Wide_Web
+4	https://en.wikipedia.org/wiki/Citation_graph
