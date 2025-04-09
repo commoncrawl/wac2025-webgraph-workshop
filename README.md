@@ -3,7 +3,7 @@ Introduction to Web Graphs
 
 Workshop at the [IIPC Web Archiving Conference 2025](https://netpreserve.org/ga2025/).
 
-- Slides (available soon)
+- [Workshop Slides](./docs/web-graph-workshop-wac2025.pdf)
 - [Links and bibliographic references](./docs/web-graph-workshop-wac2025.bib)
 
 

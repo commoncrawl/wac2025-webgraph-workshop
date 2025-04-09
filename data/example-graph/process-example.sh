@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# processing the example graph
+
+# Note: Java CLASSPATH needs to be set
+
 set -ex
 
 cat edges.txt
@@ -14,6 +18,13 @@ java it.unimi.dsi.webgraph.Transform transposeOffline exmpl exmpl-t
 
 # Statistics
 java it.unimi.dsi.webgraph.Stats --save-degrees exmpl
+# option --save-degrees adds text in/outdegree lists:
+# - *.outdegrees  : outdegree of node n, starting with node 0 in the first line
+# - *.outdegree   : histogram: number of nodes with outdegree k
+#                   (line 0 := zero outlinks, line 1 := one outlink, etc.)
+# - same for *.indegrees / *.indegree
+echo -e "out\tin\tid\tlabel"
+paste exmpl.outdegrees exmpl.indegrees vertices.txt
 
 # PageRank
 java it.unimi.dsi.law.rank.PageRankParallelGaussSeidel \
